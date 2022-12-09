@@ -14,31 +14,28 @@ export class Student {
       throw new Error("no grade provided");
     }
 
-    let response;
     // Return a letter grade if a number grade was passed
     // Ex. 95 => 'A'
     if (typeof input === "number") {
       if (isInRange({ num: input, min: 90, max: 100 })) {
-        response = "A";
+        return "A";
       }
 
       if (isInRange({ num: input, min: 80, max: 89 })) {
-        response = "B";
+        return "B";
       }
 
       if (isInRange({ num: input, min: 70, max: 79 })) {
-        response = "C";
+        return "C";
       }
 
       if (isInRange({ num: input, min: 60, max: 69 })) {
-        response = "D";
+        return "D";
       }
 
       if (input < 60) {
-        response = "F";
+        return "F";
       }
-
-      return response;
     }
 
     // Return a range if a letter grade was passed
@@ -46,26 +43,18 @@ export class Student {
     if (typeof input === "string") {
       switch (input) {
         case "A":
-          response = "90 - 100";
-          break;
+          return "90 - 100";
         case "B":
-          response = "80 - 89";
-          break;
+          return "80 - 89";
         case "C":
-          response = "70 - 79";
-          break;
+          return "70 - 79";
         case "D":
-          response = "60 - 69";
-          break;
+          return "60 - 69";
         case "F":
-          response = "0 - 59";
-          break;
+          return "0 - 59";
         default:
-          response = "0";
-          break;
+          return "0";
       }
-
-      return response;
     }
   }
 }
