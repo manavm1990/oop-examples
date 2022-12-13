@@ -1,4 +1,4 @@
-import { isInRange } from "./utils.js";
+import { isInRange } from "../utils.js";
 
 export class Student {
   constructor({ first, last, age }) {
