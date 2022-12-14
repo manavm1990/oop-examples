@@ -20,4 +20,8 @@ export class TodoList {
   get nextTodo() {
     return this.#todos[0];
   }
+
+  get todos() {
+    return this.#todos;
+  }
 }
