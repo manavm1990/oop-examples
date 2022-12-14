@@ -9,6 +9,8 @@ export class TodoList {
   }
 
   addTodo(text) {
+    // We want to actually create a new Todo object
+    // We don't want to just add a string to the array
     const todo = new Todo(text);
     this.#todos.push(todo);
   }
